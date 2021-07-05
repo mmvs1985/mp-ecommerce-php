@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html class="supports-animation supports-columns svg no-touch no-ie no-oldie no-ios supports-backdrop-filter as-mouseuser" lang="en-US"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     
@@ -7,13 +8,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <meta name="format-detection" content="telephone=no">
 
-    <?php
-        // SDK de Mercado Pago
-        require __DIR__ .  '/vendor/autoload.php';
-        require_once 'credenciales.php';
-        // Agrega credenciales
-        MercadoPago\SDK::setAccessToken($access_token);
-    ?>  
+
 
 
     <script
