@@ -7,6 +7,15 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <meta name="format-detection" content="telephone=no">
 
+    <?php
+        // SDK de Mercado Pago
+        require __DIR__ .  '/vendor/autoload.php';
+        require_once 'credenciales.php';
+        // Agrega credenciales
+        MercadoPago\SDK::setAccessToken($access_token);
+    ?>  
+
+
     <script
     src="https://code.jquery.com/jquery-3.4.1.min.js"
     integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
