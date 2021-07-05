@@ -176,7 +176,7 @@
                                             <?php echo "$" . $unit_price  ?>
                                         </h3>
                                     </div>
-                                    <button href="<?php echo $preference->init_point;?>" type="submit" class="mercadopago-button" formmethod="post">Pagar</button>
+                                    <button formaction="<?php echo $preference->init_point;?>" type="submit" class="mercadopago-button" formmethod="post">Pagar</button>
                                   
                                 </div>
                             </div>
