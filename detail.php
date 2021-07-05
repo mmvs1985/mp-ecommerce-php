@@ -7,12 +7,16 @@
 
         // Crea un objeto de preferencia
         $preference = new MercadoPago\Preference();
+        $title = $_POST['title'];
+        $quantity = intval($_POST['unit']);
+        $unit_price = floatval($_POST['price']);
+
 
         // Crea un ítem en la preferencia
         $item = new MercadoPago\Item();
-        $item->title = $_POST['title'];
-        $item->quantity = $_POST['unit'];
-        $item->unit_price = $_POST['price'];
+        $item->title = $title;
+        $item->quantity = $quantity;
+        $item->unit_price = floatval($unit_price);
         $preference->items = array($item);
         $preference->save();
     ?>  
@@ -36,14 +40,14 @@
 
     <script>
 // Agrega credenciales de SDK
-  const mp = new MercadoPago($public_key, {
+  const mp = new MercadoPago(<?php echo $public_key?>, {
         locale: 'es-AR'
   });
 
   // Inicializa el checkout
   mp.checkout({
       preference: {
-          id: 'YOUR_PREFERENCE_ID'
+          id: <?php echo $preference->id?>
       },
       render: {
             container: '.cho-container', // Indica dónde se mostrará el botón de pago
@@ -160,19 +164,20 @@
                                         <div class="as-producttile-title">
                                             <h3 class="as-producttile-name">
                                                 <p class="as-producttile-tilelink">
-                                                    <span data-ase-truncate="2"><?php echo $_POST['title'] ?></span>
+                                                    <span data-ase-truncate="2"><?php echo $title ?></span>
                                                 </p>
 
                                             </h3>
                                         </div>
                                         <h3 >
-                                            <?php echo $_POST['price'] ?>
+                                            <?php echo $quantity?>
                                         </h3>
                                         <h3 >
-                                            <?php echo "$" . $_POST['unit'] ?>
+                                            <?php echo "$" . $unit_price  ?>
                                         </h3>
                                     </div>
-                                    <button type="submit" class="mercadopago-button" formmethod="post">Pagar</button>
+                                    <button href="<?php echo $preference->init_point;?>" type="submit" class="mercadopago-button" formmethod="post">Pagar</button>
+                                  
                                 </div>
                             </div>
                         </div>
