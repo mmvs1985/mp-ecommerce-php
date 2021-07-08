@@ -10,6 +10,7 @@
 
 
 
+    <script src="https://www.mercadopago.com/v2/security.js" view="home"></script>
     <script
     src="https://code.jquery.com/jquery-3.4.1.min.js"
     integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
@@ -480,7 +481,7 @@
                                                 $8.000
                                             </div>
                                         </div>
-                                        <form action="/detail.php" method="get">
+                                        <form action="detail.php" method="get">
                                             <input type="hidden" name="img" value="./assets/motorola-moto-g4-3.jpg">
                                             <input type="hidden" name="title" value="Moto G4">
                                             <input type="hidden" name="price" value="8000">

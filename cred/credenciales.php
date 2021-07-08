@@ -1,4 +1,4 @@
 <?php
-$access_token = "TEST-7355716168117040-070502-6c2864be8f2877ab39fe3ff2b2ecdd99-185661095";
-$public_key = "TEST-b55f08fd-e962-41f1-921f-88dc6096ed1f";
+$access_token = "APP_USR-6317427424180639-042414-47e969706991d3a442922b0702a0da44-469485398";
+$public_key = "APP_USR-7eb0138a-189f-4bec-87d1-c0504ead5626";
 ?>
