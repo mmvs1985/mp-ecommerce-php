@@ -72,7 +72,7 @@ error_reporting(E_ALL);
 
         $preference->external_reference = "mmvs1985@gmail.com";
 
-        $preference->notification_url = "https://mmvs1985-mp-ecommerce-php.herokuapp.com/ipn";
+        $preference->notification_url = "https://mmvs1985-mp-ecommerce-php.herokuapp.com/webhook";
             
         $preference->items = array($item);
         
